@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Enhanced Calculator</title>
+</head>
+<body>
+    <h1>AI-Enhanced Calculator</h1>
+    <form method="post" action="/calculate">
+        <input type="text" name="text_input" placeholder="Enter your calculation" required>
+        <button type="submit">Calculate</button>
+    </form>
+    {% if result %}
+        <h2>Result: {{ result }}</h2>
+    {% endif %}
+    {% if next_calc %}
+        <h2>Next Calculation Prediction: {{ next_calc }}</h2>
+    {% endif %}
+</body>
+</html>
